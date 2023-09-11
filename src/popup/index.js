@@ -108,17 +108,16 @@ document.querySelector('#button').addEventListener('click', async () => {
   }
 })
 
-document.querySelector('#button2').addEventListener('click', async () => {
-  chrome.storage.local.get(['fc_listar_oportunidade_por_produto'], async ({ fc_listar_oportunidade_por_produto }) => {
-    const values = JSON.parse(fc_listar_oportunidade_por_produto);
+// document.querySelector('#button2').addEventListener('click', async () => {
+//   chrome.storage.local.get(['fc_listar_oportunidade_por_produto'], async ({ fc_listar_oportunidade_por_produto }) => {
+//     const values = JSON.parse(fc_listar_oportunidade_por_produto);
 
-    const workbook = XLSX.utils.book_new();
-    const ws = XLSX.utils.json_to_sheet(values);
-    XLSX.utils.book_append_sheet(workbook, ws, "Leads");
-    XLSX.writeFile(workbook, 'PortoLeads.xlsx')
-  })
-
-})
+//     const workbook = XLSX.utils.book_new();
+//     const ws = XLSX.utils.json_to_sheet(values);
+//     XLSX.utils.book_append_sheet(workbook, ws, "Leads");
+//     XLSX.writeFile(workbook, 'PortoLeads.xlsx')
+//   })
+// })
 
 
 // 648031ff5ed32c000dbf4af1 meu token
